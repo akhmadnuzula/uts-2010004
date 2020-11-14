@@ -13,75 +13,55 @@
             margin: auto;
             width: 50%;
             padding-top: 10%;
+            align-items: center;
         }
         
-        table {
-            border: 1px solid #ddd;
+        .border {
+            margin-top: 25px;
+            border-style: solid;
+            border-color: red;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        
+        .group {
+            display: flex;
+            margin: 10px;
             width: 100%;
         }
         
-        th {
-            border: 1px solid #ddd;
-            text-align: center;
-            padding: 5px;
+        label {
+            width: 30%;
         }
         
-        td {
-            border: 1px solid #ddd;
-            text-align: left;
-            padding: 5px;
+        input,
+        select {
+            width: 65%;
         }
         
-        img {
-            width: 250px;
-            height: auto;
-        }
-        
-        .w-10 {
-            width: 15%;
-        }
-        
-        .w-50 {
-            width: 50%;
+        .red {
+            border: 2px solid blue;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <table>
-            <tr>
-                <th colspan="4">My Profile</th>
-            </tr>
-            <tr>
-                <td class="w-10">Nama</td>
-                <td>:</td>
-                <td class="w-50">Akhmad Firdausi Nuzula M</td>
-                <td rowspan="5">
-                    <img src="images/foto.jpg" alt="foto diri">
-                </td>
-            </tr>
-            <tr>
-                <td class="w-10">Kelas</td>
-                <td>:</td>
-                <td class="w-50">1B</td>
-            </tr>
-            <tr>
-                <td class="w-10">Prodi</td>
-                <td>:</td>
-                <td class="w-50">Teknik Informatika</td>
-            </tr>
-            <tr>
-                <td class="w-10">Hoby</td>
-                <td>:</td>
-                <td class="w-50">Coding</td>
-            </tr>
-            <tr>
-                <td class="w-10"> </td>
-                <td> </td>
-                <td class="w-50"> </td>
-            </tr>
-        </table>
+        <div class="border">
+            <form action="" method="post">
+                <div class="group">
+                    <label for="kampus">Kampus</label>
+                    <input type="text" name="kampus" id="kampus" class="red">
+                </div>
+                <div class="group">
+                    <label for="prodi">Prodi</label>
+                    <select name="prodi" id="prodi" class="red">
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Sistem Informatika">Sistem Informatika</option>
+                    </select>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
